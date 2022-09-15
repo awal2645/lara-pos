@@ -1,30 +1,12 @@
-![Triangle POS](public/images/logo-dark.png)
+![TEXlab POS](public/images/logo.png)
 > This Project is ready for Production. If you find any bug or have any suggestion please create an Issue.
 
-# Local Installation
-
-- run `` git clone https://github.com/FahimAnzamDip/triangle-pos.git ``
-- run ``composer update `` 
-- run `` npm install ``
-- run ``npm run dev``
-- copy .env.example to .env
-- run `` php artisan key:generate ``
-- set up your database in the .env
-- run `` php artisan migrate --seed ``
-- run `` php artisan storage:link ``
-- run `` php artisan serve ``
-- then visit `` http://localhost:8000 or http://127.0.0.1:8000 ``.
-
-> **Important Note:** "Triangle POS" uses Laravel Snappy Package for PDFs. If you are using Linux then no configuration is needed. But in other Operating Systems please refer to [Laravel Snappy Documentation](https://github.com/barryvdh/laravel-snappy).
+> **Important Note:** "TEXlab POS" uses Laravel Snappy Package for PDFs. If you are using Linux then no configuration is needed. But in other Operating Systems please refer to [Laravel Snappy Documentation](https://github.com/barryvdh/laravel-snappy).
 
 # Admin Credentials
 > Email: admin@test.com || Password: 12345678
 
-## Demo
-![Triangle POS](public/images/screenshot.jpg)
-**Live Demo:** https://enigmatic-thicket-18156.herokuapp.com
-
-## Triangle POS Features
+## TEXlab POS Features
 
 - **Products Management & Barcode Printing**
 - **Stock Management**
