@@ -39,6 +39,8 @@ class PosController extends Controller
             } else {
                 $payment_status = 'Paid';
             }
+            
+            global $sale;
 
             $sale = Sale::create([
                 'date' => now()->format('Y-m-d'),
@@ -92,9 +94,11 @@ class PosController extends Controller
                 ]);
             }
         });
-
         toast('POS Sale Created!', 'success');
+        $redirectUrl = $request->redirect_url.'/sales/pos/pdf/' . $GLOBALS['sale']->id;
 
-        return redirect()->route('sales.index');
+        unset( $GLOBALS['sale'] );
+        
+        return redirect()->away( $redirectUrl);
     }
 }

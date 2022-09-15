@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::group(['middleware' => 'auth'], function () {
     //Generate PDF
     Route::get('/quotations/pdf/{id}', function ($id) {

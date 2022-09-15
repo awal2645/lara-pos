@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => 'auth'], function() {
 
     //Generate PDF
@@ -18,7 +18,7 @@ Route::group(['middleware' => 'auth'], function() {
         $purchaseReturn = \Modules\PurchasesReturn\Entities\PurchaseReturn::findOrFail($id);
         $supplier = \Modules\People\Entities\Supplier::findOrFail($purchaseReturn->supplier_id);
 
-        $pdf = \PDF::loadView('purchasesreturn::print', [
+        $pdf = PDF::loadView('purchasesreturn::print', [
             'purchase_return' => $purchaseReturn,
             'supplier' => $supplier,
         ])->setPaper('a4');
